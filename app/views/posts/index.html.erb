@@ -1,0 +1,16 @@
+<% @posts.each do |post| %> <!--for each post(loop) diplay title-->
+
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <%= image_tag("holiday_home.jpg", :alt => "Hunters Bay") %>
+    </a>
+
+
+  <h2><%= link_to post.title, post , style: 'color:#2F4F4F'%></h2>
+  <div><%= post.address %></div>
+  <div><%= post.rv %></div>
+  <div><%= truncate(post.body, :length => 35) %></div>
+  <br>
+
+  </div>
+<% end %>

@@ -1,0 +1,22 @@
+<style>
+h1 {
+  font-family: helvetica;
+  font-size: 300%;
+}
+</style>
+<p class="bg-primary"></p>
+<h1 font_family : "verdana;"> <%= @post.title %></h1>
+
+  <%= image_tag("holiday_home.jpg", :alt => "Hunters Bay", class: "img-responsive center-block") %>
+
+  <%= @post.address %>
+<div>
+  <%= @post.rv %>
+<div>
+  <%= @post.body %>
+<div>
+<br>
+<%= link_to "Edit Post", edit_post_path(@post) %>
+<div>
+<br>
+<%= link_to "Delete Post", post_path(@post), method: :delete, data: { confirm: "Are you sure?"} %>
